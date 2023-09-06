@@ -10,10 +10,10 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const { data, content } = matter(fileContents);
 
-  type Items = {
-    [key: string]: string;
-  };
-  const items: Items = {};
+  // type Items = {
+  //   [key: string]: string;
+  // };
+  const items: any = {};
 
   fields.forEach((field) => {
     if (field === "slug") {

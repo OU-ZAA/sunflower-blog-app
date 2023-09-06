@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Session } from "next-auth";
-import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 export function UserNav({ user }: Session) {
   return (
@@ -47,12 +47,10 @@ export function UserNav({ user }: Session) {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <Link href="/api/auth/signout">
-          <DropdownMenuItem>
-            Log out
-            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </Link>
+        <DropdownMenuItem onClick={() => signOut()}>
+          Log out
+          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

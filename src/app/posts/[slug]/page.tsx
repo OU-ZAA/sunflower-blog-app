@@ -3,7 +3,7 @@ import markdownToHtml from "@/lib/markdownToHtml";
 import Image from "next/image";
 import { parseISO, format } from "date-fns";
 
-type Post = {
+export type Post = {
   slug: string;
   title: string;
   excerpt: string;

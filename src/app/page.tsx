@@ -13,7 +13,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-slate-100">
-      <div className="max-w-2xl mx-auto mt-20">
+      <div className="max-w-2xl mx-auto mt-8">
         {posts.map((post) => (
           <Link href={`posts/${post.slug}`} key={post.slug}>
             <article className="mb-4 bg-white shadow rounded-md">

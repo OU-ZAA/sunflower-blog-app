@@ -27,7 +27,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="bg-white border-b fixed top-0 right-0 left-0 h-14">
+        <header className="bg-white border-b">
           <div className="container max-w-6xl py-2 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <Image src={Logo} alt="App's logo" width={50} priority={true} />

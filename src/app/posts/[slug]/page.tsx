@@ -23,7 +23,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <div className="bg-slate-100 pt-20">
+    <div className="bg-slate-100 pt-8">
       <article className="bg-white max-w-4xl mx-auto p-8 shadow rounded-lg">
         <p className="text-sm mb-1">
           Posted on <span>{format(data, "LLL d")}.</span>

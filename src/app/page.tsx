@@ -1,6 +1,5 @@
 import { getAllPosts } from "@/lib/api";
 import { Post } from "./posts/[slug]/page";
-import Image from "next/image";
 import { parseISO, format } from "date-fns";
 import Link from "next/link";
 
@@ -10,17 +9,11 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const posts: Post[] = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "author",
-    "coverImage",
-  ]);
+  const posts: Post[] = getAllPosts(["title", "date", "slug"]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-slate-100">
-      <div className="max-w-2xl mx-auto mt-8">
+      <div className="max-w-2xl mx-auto mt-20">
         {posts.map((post) => (
           <Link href={`posts/${post.slug}`} key={post.slug}>
             <article className="mb-4 bg-white shadow rounded-md">
